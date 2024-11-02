@@ -1,0 +1,10 @@
+<img [src]="product.thumbnail" alt="{{ product.title }}" />
+<h3>{{ product.title }}</h3>
+<p>{{ product.description }}</p>
+<span>{{ product.price.current| currency }}</span>
+
+
+<div class="card_btns">
+    <button (click)="addToCart(product._id)">add to cart</button>
+    <button (click)="getDetails(product)">show details</button>
+</div>

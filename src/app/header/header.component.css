@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.888);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+nav a {
+    color: rgba(240, 248, 255, 0.763);
+    font-size: 16px;
+
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav a:hover {
+    color: rgba(240, 248, 255, 1);
+}
+
+.router-link-active {
+    color: rgb(255, 255, 255) !important;
+}
+
+

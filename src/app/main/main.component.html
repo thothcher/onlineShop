@@ -1,0 +1,24 @@
+<div>
+    <!-- Search Filter -->
+    <input type="text" [(ngModel)]="searchQuery" (input)="filterProducts()" placeholder="Search by name" />
+    <!-- Brand Filter -->
+    <select [(ngModel)]="selectedBrand" (change)="filterProducts()">
+        <option value="">All Brands</option>
+        <option *ngFor="let brand of getUniqueBrands()" [value]="brand">{{ brand }}</option>
+    </select>
+
+
+    <!-- Price Range Filter -->
+
+    <mat-slider min="200" max="500" (input)="filterProducts()" showTickMarks discrete [displayWith]="formatLabel">
+        <input value="300" matSliderStartThumb [(ngModel)]="priceRange.min">
+        <input value="400" matSliderEndThumb [(ngModel)]="priceRange.max">
+    </mat-slider>
+
+
+    <!-- Product Cards -->
+
+    <div class="product_list">
+        <app-card *ngFor="let productItem of filteredProducts" [product]="productItem"></app-card>
+    </div>
+</div>
